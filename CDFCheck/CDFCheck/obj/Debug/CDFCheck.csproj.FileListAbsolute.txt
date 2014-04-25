@@ -17,8 +17,8 @@ c:\users\hubert\documents\visual studio 2012\Projects\CDFCheck\CDFCheck\obj\Debu
 c:\users\hubert\documents\visual studio 2012\Projects\CDFCheck\CDFCheck\obj\Debug\CDFCheck.dll
 c:\users\hubert\documents\visual studio 2012\Projects\CDFCheck\CDFCheck\obj\Debug\CDFCheck.pdb
 c:\users\hubert\documents\visual studio 2012\Projects\CDFCheck\CDFCheck\obj\Debug\XapCacheFile.xml
-c:\users\hubert\documents\visual studio 2012\Projects\CDFCheck\CDFCheck\obj\Debug\LabDetail.g.cs
 c:\users\hubert\documents\visual studio 2012\Projects\CDFCheck\CDFCheck\Bin\Debug\HtmlAgilityPack.dll
 c:\users\hubert\documents\visual studio 2012\Projects\CDFCheck\CDFCheck\Bin\Debug\HtmlAgilityPack.pdb
 c:\users\hubert\documents\visual studio 2012\Projects\CDFCheck\CDFCheck\Bin\Debug\HtmlAgilityPack.xml
 c:\users\hubert\documents\visual studio 2012\Projects\CDFCheck\CDFCheck\obj\Debug\CDFCheck.csprojResolveAssemblyReference.cache
+C:\Users\Hubert\documents\visual studio 2012\Projects\CDFCheck\CDFCheck\obj\Debug\LabDetailControl.g.cs

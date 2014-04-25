@@ -24,13 +24,7 @@ namespace CDFCheck
 
             // Set the data context of the listbox control to the sample data
             DataContext = App.ViewModel;
-
-            // Sample code to localize the ApplicationBar
-            //BuildLocalizedApplicationBar();
             Update();
-            /*LabDetail ld = new LabDetail();
-            Labs.ItemsSource = new List<object> { 
-                new LabDetail(),  new LabDetail() };*/
         }
 
         // Load data for the ViewModel Items
@@ -52,58 +46,75 @@ namespace CDFCheck
             }
             catch
             {
-                LabList.ItemsSource = new List<object> { "Error: the list cannot be generated." };
-                LastUpdated.Text = "Last update: --";
+                UpdateError();
+                
             }
         }
 
         void client_OpenReadCompleted(object sender, OpenReadCompletedEventArgs e)
         {
-            StreamReader reader = new StreamReader(e.Result);
-            List<string> slist = new List<string>();
-            while (!reader.EndOfStream)
-                slist.Add(reader.ReadLine());
-            e.Result.Close();
-            reader.Close();
-
-            List<Info> Infos = new List<Info>();
-            foreach (string s in slist)
+            try
             {
-                string[] delim = new string[] { "<TD>" };
-                if (s.Trim().StartsWith("<TD>"))
+                StreamReader reader = new StreamReader(e.Result);
+                List<string> slist = new List<string>();
+                while (!reader.EndOfStream)
+                    slist.Add(reader.ReadLine());
+                e.Result.Close();
+                reader.Close();
+
+                List<LabInfo> TempLabInfos = new List<LabInfo>();
+                foreach (string s in slist)
                 {
-                    List<String> split = new List<String>(s.Trim().Split(delim, StringSplitOptions.RemoveEmptyEntries));
-                    split.RemoveAll(x => x == "");
-                    Info i = new Info();
-                    i.Name = split[0];
-                    i.Available = split[1];
-                    i.Busy = split[2];
-                    i.Total = split[3];
-                    i.Percent = split[4];
-                    i.Time = split[5];
-                    Infos.Add(i);
-                }
-            }
-
-            Infos.OrderBy(x => x.Percent);
-            List<LabDetail> LabDetails = new List<LabDetail>();
-
-            foreach (Info i in Infos)
-            {
-                LabDetail ld = new LabDetail();
-                ld.LabName.Text = i.Name;
-                ld.Detail.Text = "Usage: " + i.Busy + "/" + i.Total + " (" + i.Percent + "%)";
-
-                if (float.Parse(i.Percent) > 80)
-                {
-                    ld.LayoutRoot.Background = new SolidColorBrush(Colors.Red);
+                    string[] delim = new string[] { "<TD>" };
+                    if (s.Trim().StartsWith("<TD>"))
+                    {
+                        List<String> split = new List<String>(s.Trim().Split(delim, StringSplitOptions.RemoveEmptyEntries));
+                        split.RemoveAll(x => x == "");
+                        LabInfo i = new LabInfo();
+                        i.Name = split[0];
+                        i.Available = split[1];
+                        i.Busy = split[2];
+                        i.Total = split[3];
+                        i.Percent = split[4];
+                        i.Time = split[5];
+                        TempLabInfos.Add(i);
+                    }
                 }
 
-                LabDetails.Add(ld);
-            }
+                TempLabInfos = TempLabInfos.OrderBy(x => x.Percent).ToList<LabInfo>();
+                List<LabDetailControl> LabDetails = new List<LabDetailControl>();
 
-            LabList.ItemsSource = LabDetails;
-            LastUpdated.Text = "Last update: " + Infos[0].Time;
+                foreach (LabInfo i in TempLabInfos)
+                {
+                    LabDetailControl ld = new LabDetailControl();
+                    ld.LabName.Text = i.Name;
+                    ld.Detail.Text = "Usage: " + i.Busy + "/" + i.Total + " (" + i.Percent + "%)";
+
+                    if (float.Parse(i.Percent) > 80)
+                    {
+                        ld.Background = new SolidColorBrush(Colors.Red);
+                    }
+
+                    LabDetails.Add(ld);
+                }
+
+                LabList.ItemsSource = LabDetails;
+                LastUpdated.Text = "Last update: " + TempLabInfos[0].Time;
+            }
+            catch
+            {
+                UpdateError();
+            }
+        }
+
+        private void UpdateError()
+        {
+            LabDetailControl ldc = new LabDetailControl();
+            ldc.LabNameText = "Error";
+            ldc.DetailText = "Cannot load the content.";
+            ldc.Background = new SolidColorBrush(Colors.Gray);
+            LabList.ItemsSource = new List<object> { ldc };
+            LastUpdated.Text = "Last update: ERROR";
         }
 
         private void btnRefresh_Click(object sender, RoutedEventArgs e)

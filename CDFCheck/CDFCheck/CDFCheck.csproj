@@ -93,9 +93,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Info.cs" />
-    <Compile Include="LabDetail.xaml.cs">
-      <DependentUpon>LabDetail.xaml</DependentUpon>
+    <Compile Include="LabInfo.cs" />
+    <Compile Include="LabDetailControl.xaml.cs">
+      <DependentUpon>LabDetailControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
@@ -115,7 +115,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
-    <Page Include="LabDetail.xaml">
+    <Page Include="LabDetailControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

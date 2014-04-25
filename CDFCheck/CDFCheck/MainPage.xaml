@@ -41,32 +41,11 @@
             <!--Pivot item one-->
             <phone:PivotItem Header="labs">
                 <!--Double line list with text wrapping-->
-                <phone:LongListSelector  Name="LabList" Margin="0,0,-12,0">
-                    <!--<phone:LongListSelector.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel Margin="0,0,0,17">
-                                <TextBlock Text="{Binding LineOne}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
-                                <TextBlock Text="{Binding LineTwo}" TextWrapping="Wrap" Margin="12,-6,12,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
-                            </StackPanel>
-                        </DataTemplate>
-                    </phone:LongListSelector.ItemTemplate>-->
-                </phone:LongListSelector>
+                <phone:LongListSelector  Name="LabList" Margin="0,0,-12,0" />
             </phone:PivotItem>
 
             <!--Pivot item two-->
             <phone:PivotItem Header="update">
-                <!--Double line list no text wrapping-->
-                <!--<phone:LongListSelector Margin="0,0,-12,0" ItemsSource="{Binding Items}">
-                    <phone:LongListSelector.ItemTemplate>
-                            <DataTemplate>
-                                <StackPanel Margin="0,0,0,17">
-                                    <TextBlock Text="{Binding LineOne}" TextWrapping="NoWrap" Margin="12,0,0,0" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
-                                    <TextBlock Text="{Binding LineThree}" TextWrapping="NoWrap" Margin="12,-6,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
-                                </StackPanel>
-                            </DataTemplate>
-                        
-                    </phone:LongListSelector.ItemTemplate>
-                </phone:LongListSelector>-->
                 <StackPanel>
                     <TextBlock Name="LastUpdated">Last update: --</TextBlock>
                     <TextBlock>Tap Refresh button below to update.</TextBlock>
