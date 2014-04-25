@@ -1,0 +1,14 @@
+﻿<xapCache source="c:\users\hubert\documents\visual studio 2012\Projects\CDFCheck\CDFCheck\Bin\Debug\CDFCheck_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="2014-04-24 11:55:31 PM">
+  <file source="c:\users\hubert\documents\visual studio 2012\Projects\CDFCheck\CDFCheck\obj\Debug\CDFCheck.dll" archivePath="CDFCheck.dll" lastWriteTime="2014-04-24 11:55:31 PM" />
+  <file source="c:\users\hubert\documents\visual studio 2012\Projects\CDFCheck\CDFCheck\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="2014-04-24 10:31:40 PM" />
+  <file source="c:\users\hubert\documents\visual studio 2012\Projects\CDFCheck\CDFCheck\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="2014-04-24 10:31:40 PM" />
+  <file source="c:\users\hubert\documents\visual studio 2012\Projects\CDFCheck\CDFCheck\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="2014-04-24 10:31:40 PM" />
+  <file source="c:\users\hubert\documents\visual studio 2012\Projects\CDFCheck\CDFCheck\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="2014-04-24 10:31:40 PM" />
+  <file source="c:\users\hubert\documents\visual studio 2012\Projects\CDFCheck\CDFCheck\Assets\Tiles\IconicTileSmall.png" archivePath="Assets\Tiles\IconicTileSmall.png" lastWriteTime="2014-04-24 10:31:40 PM" />
+  <file source="c:\users\hubert\documents\visual studio 2012\Projects\CDFCheck\CDFCheck\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="2014-04-24 11:24:57 PM" />
+  <file source="c:\users\hubert\documents\visual studio 2012\Projects\CDFCheck\CDFCheck\Bin\Debug\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="2014-04-24 10:31:40 PM" />
+  <file source="c:\users\hubert\documents\visual studio 2012\Projects\CDFCheck\CDFCheck\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="2014-04-24 10:31:40 PM" />
+  <file source="c:\users\hubert\documents\visual studio 2012\Projects\CDFCheck\packages\HtmlAgilityPack.1.4.6\lib\sl4-windowsphone71\HtmlAgilityPack.dll" archivePath="HtmlAgilityPack.dll" lastWriteTime="2014-04-24 11:19:03 PM" />
+  <file source="c:\users\hubert\documents\visual studio 2012\Projects\CDFCheck\packages\HtmlAgilityPack.1.4.6\lib\sl4-windowsphone71\HtmlAgilityPack.xml" archivePath="HtmlAgilityPack.xml" lastWriteTime="2014-04-24 11:19:03 PM" />
+  <file source="c:\users\hubert\documents\visual studio 2012\Projects\CDFCheck\CDFCheck\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="2014-04-24 10:32:06 PM" />
+</xapCache>
