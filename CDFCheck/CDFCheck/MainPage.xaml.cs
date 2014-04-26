@@ -81,7 +81,7 @@ namespace CDFCheck
                     }
                 }
 
-                TempLabInfos = TempLabInfos.OrderBy(x => x.Percent).ToList<LabInfo>();
+                TempLabInfos = TempLabInfos.OrderBy(x => float.Parse(x.Percent)).ToList<LabInfo>();
                 List<LabDetailControl> LabDetails = new List<LabDetailControl>();
 
                 foreach (LabInfo i in TempLabInfos)
